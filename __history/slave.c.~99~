@@ -36,6 +36,8 @@ void showNumb()
          index2++;
          index1 = 1;
       }
+      if(index1==16&&index2==2)
+      reset();
       signal=99;
    }
    if(input(PIN_D0)==0)

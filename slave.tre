@@ -1,7 +1,7 @@
 ÀÄslave
    ÃÄMAIN  0/76  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄlcd_init  0/58  Ram=2
+   ³  ÃÄlcd_init  0/56  Ram=2
    ³  ³  ÃÄ@delay_ms2  0/14  Ram=1
    ³  ³  ÃÄlcd_send_nibble  0/43  Ram=1
    ³  ³  ÃÄ@delay_ms2  0/14  Ram=1
@@ -26,23 +26,32 @@
    ³  ³     ÀÄ*
    ³  ÃÄlcd_gotoxy  0/35  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_784  0/88  Ram=4
+   ³  ÃÄ@PSTRINGC7_784  0/86  Ram=4
    ³  ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄlcd_putc  0/36  Ram=1
    ³  ³     ÀÄ*
-   ³  ÀÄshowNumb  0/112  Ram=0
+   ³  ÀÄshowNumb  0/146  Ram=1
    ³     ÃÄlcd_gotoxy  0/35  Ram=4
    ³     ³  ÀÄ*
-   ³     ÀÄ@PRINTF_D_784  (Inline)  Ram=6
-   ³        ÃÄ@DIV88  0/21  Ram=3
-   ³        ÃÄ@DIV88  0/21  Ram=3
-   ³        ÃÄlcd_putc  0/36  Ram=1
+   ³     ÃÄ@PRINTF_D_784  (Inline)  Ram=6
+   ³     ³  ÃÄ@DIV88  0/21  Ram=3
+   ³     ³  ÃÄ@DIV88  0/21  Ram=3
+   ³     ³  ÃÄlcd_putc  0/36  Ram=1
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÃÄlcd_putc  0/36  Ram=1
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÃÄlcd_putc  0/36  Ram=1
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÀÄlcd_putc  0/36  Ram=1
+   ³     ³     ÀÄ*
+   ³     ÀÄreset  (Inline)  Ram=0
+   ³        ÃÄlcd_init  0/56  Ram=2
    ³        ³  ÀÄ*
    ³        ÃÄlcd_putc  0/36  Ram=1
    ³        ³  ÀÄ*
-   ³        ÃÄlcd_putc  0/36  Ram=1
+   ³        ÃÄlcd_gotoxy  0/35  Ram=4
    ³        ³  ÀÄ*
-   ³        ÀÄlcd_putc  0/36  Ram=1
+   ³        ÀÄ@PSTRINGC7_784  0/86  Ram=4
    ³           ÀÄ*
    ÀÄngatSSP  0/29  Ram=1

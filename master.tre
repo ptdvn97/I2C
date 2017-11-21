@@ -3,8 +3,8 @@
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÀÄscanCol  0/23  Ram=1
    ³     ÀÄcontrolCol  0/41  Ram=2
-   ÀÄngatNgoai  0/5  Ram=0
-      ÀÄenterNumb  0/118  Ram=4
+   ÀÄngatNgoai  0/162  Ram=0
+      ÀÄenterNumb  (Inline)  Ram=4
          ÃÄscanKey  0/114  Ram=2
          ³  ÃÄcontrolCol  0/41  Ram=2
          ³  ÃÄcontrolCol  0/41  Ram=2
@@ -12,10 +12,13 @@
          ³  ÃÄcontrolCol  0/41  Ram=2
          ³  ÃÄcontrolCol  0/41  Ram=2
          ³  ÀÄcontrolCol  0/41  Ram=2
-         ÃÄ@goto10748  0/20  Ram=0
          ÃÄwrite_i2c  0/54  Ram=2
          ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
          ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+         ÃÄwrite_i2c  0/54  Ram=2
+         ³  ÀÄ*
+         ÃÄwrite_i2c  0/54  Ram=2
+         ³  ÀÄ*
          ÃÄwrite_i2c  0/54  Ram=2
          ³  ÀÄ*
          ÃÄwrite_i2c  0/54  Ram=2

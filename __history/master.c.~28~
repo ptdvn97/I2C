@@ -210,11 +210,6 @@ void enterNumb()
                write_i2c(11,slave1);
                break;
             }
-            default:
-            {
-               write_i2c(99,slave1);
-               break;
-            }
          }
          while(scanKey()!=0)
          {delay_ms(5);}

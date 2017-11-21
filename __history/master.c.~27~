@@ -202,17 +202,7 @@ void enterNumb()
             }
             case '*':
             {
-               write_i2c(10,slave1);
-               break;
-            }
-            case '#':
-            {
                write_i2c(11,slave1);
-               break;
-            }
-            default:
-            {
-               write_i2c(99,slave1);
                break;
             }
          }

@@ -1,8 +1,7 @@
-D G "HANG_4" 0 10 "input(PIN_D3)"
-D G "__PCM__" 0 229 ""5.025""
-D G "__DEVICE__" 0 229 "877"
-D G "__DATE__" 0 229 ""22-Nov-17""
-D G "__TIME__" 0 229 ""00:15:19"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "__PCM__" 0 239 ""5.025""
+D G "__DEVICE__" 0 239 "877"
+D G "__DATE__" 0 239 ""22-Nov-17""
+D G "__TIME__" 0 239 ""00:30:51"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 37 "int8" `54 
 f B "set_tris_a" 2 37 "void(int8 value)" `53 
@@ -809,8 +808,8 @@ F G "enterNumb" 0 141 "void()" `646
 V L "Key" 0 142 "int8" `647 
 V L "temp" 0 142 "int8" `648 
 V L "signal" 0 143 "int8" `649 
-F G "MAIN" 0 216 "void()" `651 
-F G "ngatNgoai" 0 225 "void()" `654 
+F G "MAIN" 0 226 "void()" `650 
+F G "ngatNgoai" 0 235 "void(float )" `653 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

@@ -1,8 +1,7 @@
-D G "LCD_TYPE" 3 52 "0x02" "Thong tin cau hinh C.LCD: 0x00=5x7, 0x01=5x10, 0x02=2 lines"
-D G "__PCM__" 0 51 ""5.025""
-D G "__DEVICE__" 0 51 "877"
-D G "__DATE__" 0 51 ""22-Nov-17""
-D G "__TIME__" 0 51 ""00:26:55"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "__PCM__" 0 68 ""5.025""
+D G "__DEVICE__" 0 68 "877"
+D G "__DATE__" 0 68 ""22-Nov-17""
+D G "__TIME__" 0 68 ""00:47:07"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 37 "int8" `54 
 f B "set_tris_a" 2 37 "void(int8 value)" `53 
@@ -1074,9 +1073,10 @@ V G "signal" 0 4 "int8" `795
 V G "index1" 0 4 "int8" `796 
 V G "index2" 0 4 "int8" `797 
 V G "led" 0 5 "int8[8]" `798 
-F G "ngatSSP" 0 9 "void()" `799 
-F G "showNumb" 0 18 "void()" `800 
-F G "MAIN" 0 35 "void()" `808 
+F G "reset" 0 8 "void()" `799 
+F G "ngatSSP" 0 17 "void()" `802 
+F G "showNumb" 0 26 "void()" `803 
+F G "MAIN" 0 50 "void()" `811 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

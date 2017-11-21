@@ -29,8 +29,6 @@ void showNumb()
       lcd_gotoxy(index1,index2);
       printf(lcd_putc,"%d",signal);
       index1++;
-      if(signal==10||signal==11)
-      index1++;
       if(index1==16)
       {
          index2++;
@@ -38,7 +36,7 @@ void showNumb()
       }
       signal=99;
    }
-   if(input(PIN_D0)==0)
+   if(i2c_read())
    {
    reset();
    }

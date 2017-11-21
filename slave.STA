@@ -1,63 +1,65 @@
 
-ROM used:   741/8192 (9%)
-            741/8192 (9%) including unused fragments
+ROM used:   775/8192 (9%)
+            775/8192 (9%) including unused fragments
 
             0.2 Average locations per line
-            2.0 Average locations per statement
+            2.1 Average locations per statement
 
 RAM used:   28/368 (8%) at main() level
             48/368 (13%) worst case
 
-Stack used: 5 worst case (4 in main + 1 for interrupts)
+Stack used: 6 worst case (5 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   50    23   6  slave.c
+   65    33   9  slave.c
     6     0   0  slave.h
   671     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
-  249    88  24  ..\..\..\..\Program Files (x86)\PICC\Devices\lcd.h
- 2229   257  70  ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
+  249    88  23  ..\..\..\..\Program Files (x86)\PICC\Devices\lcd.h
+ 2229   257  68  ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
 ----- -----
- 3205   368 Total
+ 3220   378 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     14   2    1             @delay_ms2
 0      8   1    0             @const786
-0     58   8    2    594  4.3  lcd_init
+0     56   7    2    594  4.3  lcd_init
  Inline         3    620  3.8  lcd_read_byte
-0     49   7    2    204  3.2  lcd_read_nibble
-0     87  12    3    313  3.4  lcd_send_byte
+0     49   6    2    204  3.2  lcd_read_nibble
+0     87  11    3    313  3.4  lcd_send_byte
 0     43   6    1    336  1.9  lcd_send_nibble
 0     35   5    4    335  5.5  lcd_gotoxy
 0     36   5    1    272  4.1  lcd_putc
+ Inline         0    149  2.1  reset
+0      4   1    0    321  3.1  @const800
+0     86  11    4    204  3.8  @PSTRINGC7_784
 0     29   4    1    111  4.2  ngatSSP
-0    112  15    0    204  3.8  showNumb
-0     21   3    3    165  3.7  @DIV88
- Inline         6    147  2.1  @PRINTF_D_784
+0    146  19    1    344  4.5  showNumb
+0     21   3    3    163  2.1  @DIV88
+ Inline         6    163  2.1  @PRINTF_D_784
 0     76  10    0    163  2.1  MAIN
-0      4   1    0    163  2.1  @const811
-0     88  12    4    163  2.1  @PSTRINGC7_784
- Inline         0     20  1.3  @cinit1
+0      4   1    0             @const814
+ Inline         0             @cinit1
 
 Program metrics:
     Functions               15
-    Statements              368
+    Statements              378
     Comments                528
-    Volume (V)              6571
-    Difficulty (D)          48.5
-    Effort to implement (E) 318706
-    Time to implement (T)   4 hours, 55 minutes
+    Volume (V)              7439
+    Difficulty (D)          50.3
+    Effort to implement (E) 373917
+    Time to implement (T)   5 hours, 46 minutes
     Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   14
-    Maintainability (MI)    99
+    Cyclomatic Complexity   20
+    Maintainability (MI)    98
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-00050    77  0  
-00051-007FF   660  1307  
+00051-007FF   694  1273  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

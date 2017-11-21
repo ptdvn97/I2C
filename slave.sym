@@ -24,21 +24,22 @@
 02E     index2
 02F-036 led
 037     lcd_init.i
-037     @PRINTF_D_784.P1
 037-03A atan2.y
+037     @PRINTF_D_784.P1
 037     @PSTRINGC7_784.@SCRATCH1
+037     showNumb.@SCRATCH1
 038     @PRINTF_D_784.P1
 038     lcd_init.@SCRATCH1
 038     @PSTRINGC7_784.@SCRATCH2
-039     @PRINTF_D_784.@SCRATCH1
 039     @PSTRINGC7_784.@SCRATCH3
-03A     @PRINTF_D_784.@SCRATCH2
+039     @PRINTF_D_784.@SCRATCH1
 03A     @PSTRINGC7_784.@SCRATCH4
+03A     @PRINTF_D_784.@SCRATCH2
 03B-03E atan2.x
 03B     @PRINTF_D_784.@SCRATCH3
 03C     @PRINTF_D_784.@SCRATCH4
-03D     @DIV88.P1
 03D     lcd_putc.c
+03D     @DIV88.P1
 03E     @DIV88.P1
 03E     @delay_ms2.P2
 03E     lcd_gotoxy.x
@@ -48,13 +49,13 @@
 040     lcd_gotoxy.address
 041     lcd_gotoxy.@SCRATCH1
 042     lcd_send_byte.address
-043     lcd_send_byte.n
 043.0   atan2.sign
-044     atan2.quad
+043     lcd_send_byte.n
 044     lcd_read_byte.low
+044     atan2.quad
 044     lcd_send_byte.@SCRATCH1
-045     lcd_send_nibble.n
 045     lcd_read_byte.high
+045     lcd_send_nibble.n
 046     lcd_read_nibble.n
 046     lcd_read_byte.@SCRATCH1
 047     lcd_read_nibble.@SCRATCH1
@@ -104,35 +105,37 @@ FFF     @INTERRUPT_AREA
 ROM Allocation:
 000051  LCD_INIT_STRING.call
 000055  LCD_INIT_STRING.data
-000059  ngatSSP
-000076  @const811.call
-00007A  @delay_ms2
-000088  lcd_send_nibble
-0000B3  lcd_read_nibble
-0000E4  lcd_send_byte
-0000E7  lcd_read_byte
-00013B  lcd_init
-000175  lcd_gotoxy
-000198  lcd_putc
-0001BC  @PSTRINGC7_784
+000059  @const800.call
+00005D  ngatSSP
+00007A  @const814.call
+00007E  @delay_ms2
+00008C  lcd_send_nibble
+0000B7  lcd_read_nibble
+0000E8  lcd_send_byte
+0000EB  lcd_read_byte
+00013F  lcd_init
+000177  lcd_gotoxy
+00019A  lcd_putc
+0001BE  @PSTRINGC7_784
 000214  @DIV88
 000229  showNumb
 000236  @PRINTF_D_784
-000299  MAIN
-000299  @cinit1
-0002BC  @cinit2
+0002A3  reset
+0002BB  MAIN
+0002BB  @cinit1
+0002DE  @cinit2
 
 Project Directory:
     C:\Users\Dung Phan\Documents\I2C\
 
 Project Files:
-    slave.c                                                 [22-Nov-17 00:26  CRC=BA2EBE13]
+    slave.c                                                 [22-Nov-17 00:47  CRC=02F567E4]
     slave.h                                                 [21-Nov-17 20:54  CRC=00000000]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [12-Nov-13 14:35  CRC=81334808]
     ..\..\..\..\Program Files (x86)\PICC\Devices\lcd.h      [21-Nov-17 23:20  CRC=FA7899CF]
     ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=DEA2C57C
+Source signature=27696F4D
 
 Units:
     slave (main)

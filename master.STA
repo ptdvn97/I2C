@@ -1,9 +1,9 @@
 
-ROM used:   547/8192 (7%)
-            547/8192 (7%) including unused fragments
+ROM used:   566/8192 (7%)
+            566/8192 (7%) including unused fragments
 
             0.6 Average locations per line
-            4.7 Average locations per statement
+            4.6 Average locations per statement
 
 RAM used:   30/368 (8%) at main() level
             39/368 (11%) worst case
@@ -13,43 +13,42 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  228   117 100  master.c
+  238   123 100  master.c
     6     0   0  master.h
   671     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
 ----- -----
-  905   117 Total
+  915   123 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
  Inline         1             @delay_ms1
-0     74  14    1   1121 10.1  @I2C_WRITE_1
+0     74  13    1   1121 10.1  @I2C_WRITE_1
 0     41   7    2    221  3.8  controlCol
 0     23   4    1    104  3.3  scanCol
-0    114  21    2   1239  3.9  scanKey
+0    114  20    2   1239  3.9  scanKey
 0     54  10    2     80  2.0  write_i2c
-0    118  22    4   1199  6.8  enterNumb
-0     20   4    0     61  1.2  @goto10748
+ Inline         4   1373  7.3  enterNumb
 0     51   9    0     61  1.2  MAIN
-0      5   1    0     12  0.8  ngatNgoai
- Inline         0             @cinit1
+0    162  29    0     12  0.8  ngatNgoai
+ Inline         0   1071  8.0  @cinit1
 
 Program metrics:
     Functions               9
-    Statements              117
+    Statements              123
     Comments                130
-    Volume (V)              5781
-    Difficulty (D)          33.9
-    Effort to implement (E) 195850
-    Time to implement (T)   3 hours, 1 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   36
-    Maintainability (MI)    76
+    Volume (V)              7494
+    Difficulty (D)          41.3
+    Effort to implement (E) 309444
+    Time to implement (T)   4 hours, 47 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   40
+    Maintainability (MI)    73
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-0002E    43  0  
-0002F-007FF   500  1501  
+0002F-007FF   519  1482  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

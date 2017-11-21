@@ -1,6 +1,6 @@
 >>> Warning 207 "master.c" Line 46(1,1): Code has no effect
 >>> Warning 203 "master.c" Line 144(1,1): Condition always TRUE
->>> Warning 216 "master.c" Line 227(1,2): Interrupts disabled during call to prevent re-entrancy:  (controlCol)
+>>> Warning 216 "master.c" Line 237(1,2): Interrupts disabled during call to prevent re-entrancy:  (controlCol)
       Memory usage:   ROM=7%      RAM=8% - 11%
       0 Errors,  3 Warnings.
 Build Successful.

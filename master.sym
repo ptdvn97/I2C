@@ -22,12 +22,12 @@
 03C     enterNumb.Key
 03D     enterNumb.temp
 03E     enterNumb.signal
-03F     @delay_ms1.P1
 03F     scanKey.Key
 03F     write_i2c.value
+03F     @delay_ms1.P1
 03F     enterNumb.@SCRATCH1
-040     write_i2c.slave_addr
 040     controlCol.cot
+040     write_i2c.slave_addr
 040     scanKey.@SCRATCH1
 041     @I2C_WRITE_1.P1
 041     controlCol.state
@@ -79,23 +79,22 @@ ROM Allocation:
 0000CA  @I2C_WRITE_1
 000114  write_i2c
 00014A  enterNumb
-0001A8  @delay_ms1
-0001C0  @goto10748
-0001D4  ngatNgoai
-0001D9  scanCol
-0001F0  @cinit1
-0001F0  MAIN
-0001FC  @cinit2
+00014A  ngatNgoai
+0001D3  @delay_ms1
+0001EC  scanCol
+000203  @cinit1
+000203  MAIN
+00020F  @cinit2
 
 Project Directory:
     C:\Users\Dung Phan\Documents\I2C\
 
 Project Files:
-    master.c                                                [22-Nov-17 00:15  CRC=4248321B]
+    master.c                                                [22-Nov-17 00:29  CRC=956E1001]
     master.h                                                [21-Nov-17 21:04  CRC=00000000]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [12-Nov-13 14:35  CRC=81334808]
 
-Source signature=44AEC22B
+Source signature=97D4A011
 
 Units:
     master (main)

@@ -3,7 +3,6 @@
 
 int signal=99,index1=7,index2=1;
 int8 led[8] = {0b00000001,0b00000010,0b00000100,0b00001000,0b00010000,0b00100000,0b01000000,0b10000000};
-
 void reset()
 {
    lcd_init();
@@ -24,12 +23,18 @@ void ngatSSP()
 
 void showNumb()
 {
+   if(signal == 11)
+      {
+         reset();
+      }
    if(signal!=99)
    {
+   if(signal == 11)
+      {
+         reset();
+      }
       lcd_gotoxy(index1,index2);
       printf(lcd_putc,"%d",signal);
-      index1++;
-      if(signal==10||signal==11)
       index1++;
       if(index1==16)
       {
@@ -38,12 +43,7 @@ void showNumb()
       }
       signal=99;
    }
-   if(input(PIN_D0)==0)
-   {
-   reset();
-   }
 }
-
 
 
 void main()
@@ -56,6 +56,10 @@ void main()
    enable_interrupts(GLOBAL);
    while(1)
    {
+      if(signal == 11)
+      {
+         reset();
+      }
       showNumb();
    }
 }
