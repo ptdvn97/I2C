@@ -1,0 +1,45 @@
+#include <slave.h>
+#include <lcd.h>
+
+int signal=99,index=7;
+
+#INT_SSP
+void ngatSSP()
+{
+   signal = i2c_read();
+}
+
+void showNumb()
+{
+   if(signal !=99)
+   {
+      if(signal==11)
+      {
+         index = 7;
+         lcd_putc('\f');
+         printf(lcd_putc,"Value:");
+         break;
+      }
+      lcd_gotoxy(index,1);
+      printf(lcd_putc,"%d",signal);
+      index++;
+      signal = 99;
+   }
+}
+
+void main()
+{
+   lcd_init();
+   lcd_putc('\f');
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"Value:");
+   enable_interrupts(INT_SSP);
+   enable_interrupts(GLOBAL);
+   while(1)
+   {
+      showNumb();
+   }
+}
+
+
+

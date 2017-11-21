@@ -14,9 +14,10 @@ Type=4
 1=slave.c
 [Opened Files]
 1=slave.c
-2=
+2=master.c
 3=
 4=
+5=
 [slave.c]
 Type=4
 [Units]

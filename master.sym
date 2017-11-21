@@ -14,10 +14,23 @@
 024     @INTERRUPT_AREA
 025     @INTERRUPT_AREA
 026     @INTERRUPT_AREA
-027     @TRIS_C
-028     write_i2c.value
-029     write_i2c.slave_addr
-02A     @I2C_WRITE_1.P1
+027     @INTERRUPT_AREA
+028     @TRIS_C
+029-02C value
+02D-038 phimnhan
+039     scanCol.i
+03C     enterNumb.Key
+03D     enterNumb.temp
+03E     enterNumb.signal
+03F     @delay_ms1.P1
+03F     scanKey.Key
+03F     write_i2c.value
+03F     enterNumb.@SCRATCH1
+040     write_i2c.slave_addr
+040     controlCol.cot
+040     scanKey.@SCRATCH1
+041     @I2C_WRITE_1.P1
+041     controlCol.state
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -61,22 +74,28 @@ F7F     @INTERRUPT_AREA
 FFF     @INTERRUPT_AREA
 
 ROM Allocation:
-00002F  @I2C_WRITE_1
-000079  ngatNgoai
-00007D  write_i2c
-0000B6  @cinit1
-0000B6  MAIN
-0000C2  @cinit2
+00002F  controlCol
+000058  scanKey
+0000CA  @I2C_WRITE_1
+000114  write_i2c
+00014A  enterNumb
+0001A8  @delay_ms1
+0001C0  @goto10748
+0001D4  ngatNgoai
+0001D9  scanCol
+0001F0  @cinit1
+0001F0  MAIN
+0001FC  @cinit2
 
 Project Directory:
     C:\Users\Dung Phan\Documents\I2C\
 
 Project Files:
-    master.c                                                [21-Nov-17 21:05  CRC=160360B6]
+    master.c                                                [21-Nov-17 23:46  CRC=4248321B]
     master.h                                                [21-Nov-17 21:04  CRC=00000000]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [12-Nov-13 14:35  CRC=81334808]
 
-Source signature=1869F0C6
+Source signature=44AEC22B
 
 Units:
     master (main)

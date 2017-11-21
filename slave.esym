@@ -1,7 +1,7 @@
-D G "__PCM__" 0 31 ""5.025""
-D G "__DEVICE__" 0 31 "877"
-D G "__DATE__" 0 31 ""21-Nov-17""
-D G "__TIME__" 0 31 ""21:07:20"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "__PCM__" 0 45 ""5.025""
+D G "__DEVICE__" 0 45 "877"
+D G "__DATE__" 0 45 ""22-Nov-17""
+D G "__TIME__" 0 45 ""00:01:19"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 37 "int8" `54 
 f B "set_tris_a" 2 37 "void(int8 value)" `53 
@@ -776,9 +776,305 @@ d G "INT_BUSCOL" 2 665 "0x008D08"
 d G "INT_EEPROM" 2 666 "0x008D10"
 d G "INT_TIMER0" 2 667 "0x000B20"
 d G "INT_COMP" 2 668 "0x008D40"
-F G "main" 0 7 "void()" `624 
-F G "ngatSSP" 0 19 "void()" `627 
-V L "a" 0 20 "int8" `628 
+D G "_lcd_h_" 3 1 ""
+D G "MATH_H" 4 30 ""
+D G "PI" 4 35 "3.1415926535897932"
+D G "SQRT2" 4 38 "1.4142135623730950"
+C L "jump_to_irs" 4 2 3 "FUNCTION"
+V L "x" 4 45 "float" `625 
+V L "n" 4 45 "int8" `626 
+F G "CEIL_FLOOR" 4 46 "float(float x,int8 n)" `624 
+V L "y" 4 47 "float" `627 
+V L "res" 4 47 "float" `628 
+V L "l" 4 48 "int16" `629 
+V L "s" 4 49 "int1" `630 
+C L "floor" 4 2 5 "FUNCTION"
+V L "x" 4 207 "float" `645 
+F G "floor" 4 208 "float(float x)" `644 
+C L "ceil" 4 2 5 "FUNCTION"
+V L "x" 4 233 "float" `647 
+F G "ceil" 4 234 "float(float x)" `646 
+D G "fabs" 4 259 "abs"
+C L "fmod" 4 2 6 "FUNCTION"
+V L "x" 4 271 "float" `649 
+V L "y" 4 271 "float" `650 
+F G "fmod" 4 272 "float(float x,float y)" `648 
+V L "i" 4 273 "float" `651 
+D G "LN2" 4 334 "0.6931471805599453"
+D G "LN2_INV" 4 335 "1.4426950408889634073"
+V G "pe" 4 337 "[6]" `655 
+V L "x" 4 341 "float" `659 
+F G "exp" 4 342 "float(float x)" `658 
+V L "y" 4 343 "float" `660 
+V L "res" 4 343 "float" `661 
+V L "r" 4 343 "float" `662 
+V L "n" 4 347 "sint8" `663 
+V L "s" 4 348 "int1" `664 
+C L "exp" 4 2 1 "FUNCTION"
+V G "pl" 4 525 "[4]" `667 
+V G "ql" 4 526 "[4]" `670 
+C L "log" 4 2 3 "FUNCTION"
+V L "x" 4 534 "float" `674 
+F G "log" 4 535 "float(float x)" `673 
+V L "y" 4 536 "float" `675 
+V L "res" 4 536 "float" `676 
+V L "r" 4 536 "float" `677 
+V L "y2" 4 536 "float" `678 
+V L "n" 4 540 "sint8" `679 
+C L "log" 4 2 1 "FUNCTION"
+D G "LN10" 4 758 "2.3025850929940456"
+D G "LN10_INV" 4 759 "0.4342944819032518276"
+C L "log10" 4 2 3 "FUNCTION"
+V L "x" 4 767 "float" `681 
+F G "log10" 4 768 "float(float x)" `680 
+V L "r" 4 769 "float" `682 
+C L "modf" 4 2 8 "FUNCTION"
+V L "value" 4 808 "float" `684 
+V L "iptr" 4 808 "*float" `685 
+F G "modf" 4 809 "float(float value,*float iptr)" `683 
+C L "pwr" 4 2 6 "FUNCTION"
+V L "x" 4 836 "float" `687 
+V L "y" 4 836 "float" `688 
+F G "pwr" 4 837 "float(float x,float y)" `686 
+C L "pow" 4 2 7 "FUNCTION"
+V L "x" 4 899 "float" `690 
+V L "y" 4 899 "float" `691 
+F G "pow" 4 900 "float(float x,float y)" `689 
+C L "sqrt" 4 2 5 "FUNCTION"
+V L "x" 4 960 "float" `693 
+F G "sqrt" 4 961 "float(float x)" `692 
+V L "y" 4 962 "float" `694 
+V L "res" 4 962 "float" `695 
+V L "p" 4 966 "*int8" `696 
+D G "PI_DIV_BY_TWO_INV" 4 1155 "0.63661977236758134"
+D G "PI_DIV_BY_TWO" 4 1159 "1.5707963267948966"
+D G "TWOBYPI" 4 1163 "0.6366197723675813"
+C L "cos" 4 2 3 "FUNCTION"
+V L "x" 4 1171 "float" `698 
+F G "cos" 4 1172 "float(float x)" `697 
+V L "y" 4 1173 "float" `699 
+V L "t" 4 1173 "float" `700 
+V L "t2" 4 1173 "float" `701 
+V L "quad" 4 1174 "int8" `702 
+V L "i" 4 1174 "int8" `703 
+V L "frac" 4 1175 "float" `704 
+V L "p" 4 1176 "float[5]" `705  "by the series definition for cosine"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 2 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "cos" 4 2 1 "FUNCTION"
+C L "sin" 4 2 5 "FUNCTION"
+V L "x" 4 1312 "float" `707 
+F G "sin" 4 1313 "float(float x)" `706 
+C L "tan" 4 2 5 "FUNCTION"
+V L "x" 4 1338 "float" `709 
+F G "tan" 4 1339 "float(float x)" `708 
+V L "c" 4 1340 "float" `710 
+V L "s" 4 1340 "float" `711 
+V G "pas" 4 1378 "[3]" `712 
+V G "qas" 4 1379 "[3]" `715 
+V L "x" 4 1381 "float" `719 
+V L "n" 4 1381 "int8" `720 
+F G "ASIN_COS" 4 1382 "float(float x,int8 n)" `718 
+V L "y" 4 1383 "float" `721 
+V L "res" 4 1383 "float" `722 
+V L "r" 4 1383 "float" `723 
+V L "y2" 4 1383 "float" `724 
+V L "s" 4 1384 "int1" `725 
+C L "ASIN_COS" 4 2 1 "FUNCTION"
+C L "ASIN_COS" 4 2 1 "FUNCTION"
+C L "asin" 4 2 5 "FUNCTION"
+V L "x" 4 1539 "float" `727 
+F G "asin" 4 1540 "float(float x)" `726 
+V L "r" 4 1541 "float" `728 
+C L "acos" 4 2 5 "FUNCTION"
+V L "x" 4 1573 "float" `730 
+F G "acos" 4 1574 "float(float x)" `729 
+V L "r" 4 1575 "float" `731 
+V G "pat" 4 1601 "[4]" `732 
+V G "qat" 4 1602 "[4]" `735 
+C L "atan" 4 2 3 "FUNCTION"
+V L "x" 4 1610 "float" `739 
+F G "atan" 4 1611 "float(float x)" `738 
+V L "y" 4 1612 "float" `740 
+V L "res" 4 1612 "float" `741 
+V L "r" 4 1612 "float" `742 
+V L "s" 4 1613 "int1" `743 
+V L "flag" 4 1613 "int1" `744 
+C L "atan" 4 2 1 "FUNCTION"
+C L "atan2" 4 2 7 "FUNCTION"
+V L "y" 4 1753 "float" `746 
+V L "x" 4 1753 "float" `747 
+F G "atan2" 4 1754 "float(float y,float x)" `745 
+V L "z" 4 1755 "float" `748 
+V L "sign" 4 1756 "int1" `749 
+V L "quad" 4 1757 "int8" `750 
+C L "atan2" 4 2 1 "FUNCTION"
+C L "atan2" 4 2 1 "FUNCTION"
+C L "cosh" 4 2 7 "FUNCTION"
+V L "x" 4 1975 "float" `753 
+F G "cosh" 4 1976 "float(float x)" `752 
+C L "sinh" 4 2 6 "FUNCTION"
+V L "x" 4 2002 "float" `755 
+F G "sinh" 4 2003 "float(float x)" `754 
+C L "tanh" 4 2 6 "FUNCTION"
+V L "x" 4 2032 "float" `757 
+F G "tanh" 4 2033 "float(float x)" `756 
+D G "LOG2" 4 2062 ".30102999566398119521"
+D G "LOG2_INV" 4 2063 "3.32192809488736234787"
+V L "x" 4 2064 "float" `759 
+V L "exp" 4 2064 "*sint8" `760 
+F G "frexp" 4 2065 "float(float x,*sint8 exp)" `758 
+V L "res" 4 2066 "float" `761 
+V L "sign" 4 2067 "int1" `762 
+C L "ldexp" 4 2 6 "FUNCTION"
+V L "value" 4 2209 "float" `764 
+V L "exp" 4 2209 "sint8" `765 
+F G "ldexp" 4 2210 "float(float value,sint8 exp)" `763 
+C L "lcd_init" 4 2 2 "FUNCTION"
+f G "lcd_init" 3 4 "void()" `770  "Ham dung de khoi dong C.LCD."
+f G "lcd_read_byte" 3 5 "int8()" `771  "Ham xu ly doc thong tin (dang 8 bit) tu thong tin dang 4 bit tu C.LCD."
+f G "lcd_read_nibble" 3 6 "int8()" `772  "Ham doc thong tin (dang 4 bit / nibble) tu C.LCD."
+V L "address" 3 7 "int8" `774 
+V L "n" 3 7 "int8" `775 
+f G "lcd_send_byte" 3 7 "void(int8 address,int8 n)" `773  "Ham gui thong tin (byte) toi C.LCD tai dia chi (address)."
+V L "n" 3 8 "int8" `777 
+f G "lcd_send_nibble" 3 8 "void(int8 n)" `776  "Ham gui thong tin (dang 4 bit / nibble) sang C.LCD."
+V L "x" 3 9 "int8" `779 
+V L "y" 3 9 "int8" `780 
+f G "lcd_gotoxy" 3 9 "void(int8 x,int8 y)" `778  "Ham thiet lap vi tri ghi tren C.LCD."
+V L "x" 3 10 "int8" `782 
+V L "y" 3 10 "int8" `783 
+f G "lcd_getc" 3 10 "int8(int8 x,int8 y)" `781  "Ham tra ve ky tu tai vi tri (x,y) tren C.LCD."
+V L "c" 3 11 "int8" `785 
+f G "lcd_putc" 3 11 "void(int8 c)" `784  "Ham se hien thi ky tu c tai vi tri ke tiep tren C.LCD."
+D G "LCD_RS_PIN" 3 22 "PIN_E1" "Cac ket noi C.LCD voi vi dieu khien."
+D G "LCD_RW_PIN" 3 23 "PIN_E2"
+D G "LCD_ENABLE_PIN" 3 24 "PIN_E0"
+D G "LCD_DATA4" 3 25 "PIN_D4"
+D G "LCD_DATA5" 3 26 "PIN_D5"
+D G "LCD_DATA6" 3 27 "PIN_D6"
+D G "LCD_DATA7" 3 28 "PIN_D7"
+D G "lcd_output_enable" 3 39 "(x)   output_bit(LCD_ENABLE_PIN, x)" "Lenh dieu khien chan LCD_ENABLE_PIN."
+D G "lcd_enable_tris" 3 40 "()   output_drive(LCD_ENABLE_PIN)"
+D G "lcd_output_rs" 3 42 "(x)   output_bit(LCD_RS_PIN, x)" "Lenh dieu khien chan LCD_RS_PIN."
+D G "lcd_rs_tris" 3 43 "()      output_drive(LCD_RS_PIN)"
+D G "lcd_output_rw" 3 45 "(x)   output_bit(LCD_RW_PIN, x)" "Lenh dieu khien chan LCD_RW_PIN"
+D G "lcd_rw_tris" 3 46 "()      output_drive(LCD_RW_PIN)"
+D G "lcd_line_one" 3 48 "0x00" "Dia chi RAM C.LCD cho hang thu 1."
+D G "lcd_line_two" 3 49 "0x40" "Dia chi RAM C.LCD cho hang thu 2."
+D G "lcd_line_three" 3 50 "0x14"
+D G "lcd_line_four" 3 51 "0x54"
+D G "LCD_TYPE" 3 52 "0x02" "Thong tin cau hinh C.LCD: 0x00=5x7, 0x01=5x10, 0x02=2 lines"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+V G "LCD_INIT_STRING" 3 55 "[4]" `786 
+C L "lcd_putc" 3 12 13 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+F G "lcd_init" 3 72 "void()" `770  "Khai bao bien."
+V L "i" 3 74 "int8" `789  "Dinh nghia ham."
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_init" 3 12 2 "FUNCTION"
+C L "lcd_init" 3 12 4 "FUNCTION"
+C L "lcd_init" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+F G "lcd_read_byte" 3 109 "int8()" `771  "Khai bao bien."
+V L "low" 3 111 "int8" `790 
+V L "high" 3 111 "int8" `791  "Dinh nghia ham."
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 2 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 2 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_byte" 3 12 1 "FUNCTION"
+C L "lcd_read_nibble" 3 12 1 "FUNCTION"
+F G "lcd_read_nibble" 3 142 "int8()" `772  "Khai bao bien."
+V L "n" 3 144 "int8" `792 
+C L "lcd_read_nibble" 3 12 2 "FUNCTION"
+C L "lcd_read_nibble" 3 12 1 "FUNCTION"
+C L "lcd_read_nibble" 3 12 1 "FUNCTION"
+V L "address" 3 155 "int8" `774 
+V L "n" 3 155 "int8" `775  "Ham gui thong tin (byte) toi C.LCD tai dia chi (address)."
+F G "lcd_send_byte" 3 156 "void(int8 address,int8 n)" `773  "address = 0: Lenh / 1: Du lieu."
+C L "lcd_send_byte" 3 12 3 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+C L "lcd_send_byte" 3 12 1 "FUNCTION"
+V L "n" 3 173 "int8" `777  "Ham gui thong tin (dang 4 bit / nibble) sang C.LCD."
+F G "lcd_send_nibble" 3 174 "void(int8 n)" `776  "n = Thong tin can gui. 4 bit can gui phai nam vi tri 4 bit thap."
+C L "lcd_send_nibble" 3 12 2 "FUNCTION"
+C L "lcd_send_nibble" 3 12 1 "FUNCTION"
+C L "lcd_send_nibble" 3 12 1 "FUNCTION"
+C L "lcd_send_nibble" 3 12 1 "FUNCTION"
+C L "lcd_send_nibble" 3 12 1 "FUNCTION"
+C L "lcd_send_nibble" 3 12 1 "FUNCTION"
+V L "x" 3 190 "int8" `779 
+V L "y" 3 190 "int8" `780  "Ham thiet lap vi tri ghi tren C.LCD (Goc tren ben trai co toa do la 1,1)."
+F G "lcd_gotoxy" 3 191 "void(int8 x,int8 y)" `778  "Khai bao bien."
+V L "address" 3 193 "int8" `793  "Dinh nghia ham."
+C L "lcd_gotoxy" 3 12 1 "FUNCTION"
+C L "lcd_gotoxy" 3 12 1 "FUNCTION"
+C L "lcd_gotoxy" 3 12 1 "FUNCTION"
+C L "lcd_gotoxy" 3 12 1 "FUNCTION"
+C L "lcd_gotoxy" 3 12 3 "FUNCTION"
+C L "lcd_gotoxy" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+V L "x" 3 211 "int8" `782 
+V L "y" 3 211 "int8" `783  "Ham tra ve ky tu tai vi tri (x,y) tren C.LCD."
+F G "lcd_getc" 3 212 "int8(int8 x,int8 y)" `781  "Khai bao bien."
+V L "value" 3 214 "int8" `794  "Dinh nghia ham."
+C L "lcd_getc" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+C L "lcd_getc" 3 12 1 "FUNCTION"
+V L "c" 3 226 "int8" `785  "Ham se hien thi ky tu c tai vi tri ke tiep tren C.LCD."
+F G "lcd_putc" 3 227 "void(int8 c)" `784  "Khai bao bien."
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+C L "lcd_putc" 3 12 1 "FUNCTION"
+V G "signal" 0 4 "int8" `795 
+V G "index1" 0 4 "int8" `796 
+V G "index2" 0 4 "int8" `797 
+F G "ngatSSP" 0 8 "void()" `798 
+F G "showNumb" 0 13 "void()" `799 
+F G "MAIN" 0 29 "void()" `807 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
@@ -918,3 +1214,5 @@ F B "i2c_isr_state" 0 1
 F B "i2c_slaveaddr" 1 2
 F B "i2c_poll" 0 1
 F B "i2c_init" 1 2
+F B "delay_ms" 1 0
+F B "delay_us" 1 0

@@ -13,8 +13,11 @@ Type=4
 [mru-list]
 1=master.c
 [Opened Files]
-1=master.c
-2=
+1=slave.c
+2=master.c
+3=
+4=..\..\Downloads\Compressed\I2C - MCU MCU\I2C - MCU MCU\Code_Slaver2\Slaver2.c
+5=
 [master.c]
 Type=4
 [Units]
