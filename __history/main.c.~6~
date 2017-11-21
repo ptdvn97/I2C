@@ -1,0 +1,27 @@
+#include <main.h>
+
+
+
+
+#INT_EXT
+void ngatNgoai()
+{
+   output_bit(PIN_D0,1);
+   delay_ms(1000);
+   output_bit(PIN_D0,0);
+}
+
+
+
+void main()
+{
+   output_bit(PIN_D0,0);
+   enable_interrupts(INT_EXT);
+   enable_interrupts(INT_EXT_H2L);
+   enable_interrupts(GLOBAL);
+   while(TRUE)
+   {
+   
+   }
+
+}

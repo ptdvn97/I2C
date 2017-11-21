@@ -1,0 +1,7 @@
+ÀÄmaster
+   ÃÄMAIN  0/27  Ram=0
+   ³  ÀÄ@cinit1  (Inline)  Ram=0
+   ÀÄngatNgoai  0/61  Ram=0
+      ÀÄwrite_i2c  (Inline)  Ram=2
+         ÃÄ@I2C_WRITE_1  0/74  Ram=1
+         ÀÄ@I2C_WRITE_1  0/74  Ram=1

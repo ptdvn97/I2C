@@ -1,0 +1,5 @@
+ÀÄslave
+   ÃÄmain  0/38  Ram=0
+   ³  ÀÄ@cinit1  (Inline)  Ram=0
+   ÀÄngatSSP  0/45  Ram=2
+      ÀÄ@delay_ms1  (Inline)  Ram=1

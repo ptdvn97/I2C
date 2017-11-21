@@ -1,0 +1,14 @@
+#include <slave.h>
+
+
+
+
+void main()
+{
+   int8 a;
+   while(TRUE)
+   {
+      a = i2c_read();
+   }
+
+}

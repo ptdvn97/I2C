@@ -1,0 +1,24 @@
+[PROJECT]
+Target=slave.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.025
+Compiler=PCM
+CCSVersion=5.025
+[Target Data]
+FileList=slave.c
+[Directories]
+Include=
+[C:\Users\Dung Phan\Documents\I2C\slave]
+Type=4
+[mru-list]
+1=slave.c
+[Opened Files]
+1=slave.c
+2=
+3=
+4=
+[slave.c]
+Type=4
+[Units]
+Count=1
+1=slave (main)
