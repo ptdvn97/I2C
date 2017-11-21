@@ -22,41 +22,43 @@
 02C     signal
 02D     index1
 02E     index2
-02F     lcd_init.i
-02F-032 atan2.y
-02F     @PRINTF_D_784.P1
-02F     @PSTRINGC7_784.@SCRATCH1
-030     @PRINTF_D_784.P1
-030     lcd_init.@SCRATCH1
-030     @PSTRINGC7_784.@SCRATCH2
-031     @PRINTF_D_784.@SCRATCH1
-031     @PSTRINGC7_784.@SCRATCH3
-032     @PRINTF_D_784.@SCRATCH2
-032     @PSTRINGC7_784.@SCRATCH4
-033-036 atan2.x
-033     @PRINTF_D_784.@SCRATCH3
-034     @PRINTF_D_784.@SCRATCH4
-035     lcd_putc.c
-035     @DIV88.P1
-036     @DIV88.P1
-036     lcd_gotoxy.x
-036     @delay_ms2.P1
-037     lcd_gotoxy.y
-037-03A atan2.z
-037     @DIV88.@SCRATCH1
-038     lcd_gotoxy.address
-039     lcd_gotoxy.@SCRATCH1
-03A     lcd_send_byte.address
-03B     lcd_send_byte.n
-03B.0   atan2.sign
-03C     atan2.quad
-03C     lcd_read_byte.low
-03C     lcd_send_byte.@SCRATCH1
-03D     lcd_send_nibble.n
-03D     lcd_read_byte.high
-03E     lcd_read_nibble.n
-03E     lcd_read_byte.@SCRATCH1
-03F     lcd_read_nibble.@SCRATCH1
+02F-036 led
+037     lcd_init.i
+037     @PRINTF_D_784.P1
+037-03A atan2.y
+037     @PSTRINGC7_784.@SCRATCH1
+038     @PRINTF_D_784.P1
+038     lcd_init.@SCRATCH1
+038     @PSTRINGC7_784.@SCRATCH2
+039     @PRINTF_D_784.@SCRATCH1
+039     @PSTRINGC7_784.@SCRATCH3
+03A     @PRINTF_D_784.@SCRATCH2
+03A     @PSTRINGC7_784.@SCRATCH4
+03B-03E atan2.x
+03B     @PRINTF_D_784.@SCRATCH3
+03C     @PRINTF_D_784.@SCRATCH4
+03D     @DIV88.P1
+03D     lcd_putc.c
+03E     @DIV88.P1
+03E     @delay_ms2.P2
+03E     lcd_gotoxy.x
+03F     lcd_gotoxy.y
+03F-042 atan2.z
+03F     @DIV88.@SCRATCH1
+040     lcd_gotoxy.address
+041     lcd_gotoxy.@SCRATCH1
+042     lcd_send_byte.address
+043     lcd_send_byte.n
+043.0   atan2.sign
+044     atan2.quad
+044     lcd_read_byte.low
+044     lcd_send_byte.@SCRATCH1
+045     lcd_send_nibble.n
+045     lcd_read_byte.high
+046     lcd_read_nibble.n
+046     lcd_read_byte.@SCRATCH1
+047     lcd_read_nibble.@SCRATCH1
+048     ngatSSP.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -103,34 +105,34 @@ ROM Allocation:
 000051  LCD_INIT_STRING.call
 000055  LCD_INIT_STRING.data
 000059  ngatSSP
-000063  @const810.call
-000067  @delay_ms2
-000075  lcd_send_nibble
-0000A0  lcd_read_nibble
-0000D1  lcd_send_byte
-0000D4  lcd_read_byte
-000128  lcd_init
-000162  lcd_gotoxy
-000185  lcd_putc
-0001A9  @PSTRINGC7_784
-000201  @DIV88
-000216  showNumb
-000223  @PRINTF_D_784
-000286  MAIN
-000286  @cinit1
-0002A9  @cinit2
+000076  @const811.call
+00007A  @delay_ms2
+000088  lcd_send_nibble
+0000B3  lcd_read_nibble
+0000E4  lcd_send_byte
+0000E7  lcd_read_byte
+00013B  lcd_init
+000175  lcd_gotoxy
+000198  lcd_putc
+0001BC  @PSTRINGC7_784
+000214  @DIV88
+000229  showNumb
+000236  @PRINTF_D_784
+000299  MAIN
+000299  @cinit1
+0002BC  @cinit2
 
 Project Directory:
     C:\Users\Dung Phan\Documents\I2C\
 
 Project Files:
-    slave.c                                                 [22-Nov-17 00:01  CRC=EB0475AB]
+    slave.c                                                 [22-Nov-17 00:26  CRC=BA2EBE13]
     slave.h                                                 [21-Nov-17 20:54  CRC=00000000]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [12-Nov-13 14:35  CRC=81334808]
     ..\..\..\..\Program Files (x86)\PICC\Devices\lcd.h      [21-Nov-17 23:20  CRC=FA7899CF]
     ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=0F787D14
+Source signature=DEA2C57C
 
 Units:
     slave (main)

@@ -1,5 +1,5 @@
 ÀÄslave
-   ÃÄMAIN  0/60  Ram=0
+   ÃÄMAIN  0/76  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/58  Ram=2
    ³  ³  ÃÄ@delay_ms2  0/14  Ram=1
@@ -45,4 +45,4 @@
    ³        ³  ÀÄ*
    ³        ÀÄlcd_putc  0/36  Ram=1
    ³           ÀÄ*
-   ÀÄngatSSP  0/10  Ram=0
+   ÀÄngatSSP  0/29  Ram=1

@@ -15,7 +15,7 @@ Type=4
 [Opened Files]
 1=slave.c
 2=master.c
-3=
+3=..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
 4=
 5=
 [slave.c]

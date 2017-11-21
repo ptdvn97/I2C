@@ -2,16 +2,12 @@
 #include <lcd.h>
 
 int signal=99,index1=7,index2=1;
-int8 led[8] = {0b00000001,0b00000010,0b00000100,0b00001000,0b00010000,0b00100000,0b01000000,0b10000000};
+
 
 #INT_SSP
 void ngatSSP()
 {
    signal = i2c_read();
-   if(signal>0&&signal<9)
-   {
-      output_b(led[signal-1]);
-   }
 }
 
 void showNumb()

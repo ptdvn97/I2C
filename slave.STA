@@ -1,25 +1,25 @@
 
-ROM used:   706/8192 (9%)
-            706/8192 (9%) including unused fragments
+ROM used:   741/8192 (9%)
+            741/8192 (9%) including unused fragments
 
             0.2 Average locations per line
-            1.9 Average locations per statement
+            2.0 Average locations per statement
 
-RAM used:   20/368 (5%) at main() level
-            40/368 (11%) worst case
+RAM used:   28/368 (8%) at main() level
+            48/368 (13%) worst case
 
 Stack used: 5 worst case (4 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   44    20   5  slave.c
+   50    23   6  slave.c
     6     0   0  slave.h
   671     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
   249    88  24  ..\..\..\..\Program Files (x86)\PICC\Devices\lcd.h
  2229   257  70  ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
 ----- -----
- 3199   365 Total
+ 3205   368 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -32,32 +32,32 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     43   6    1    336  1.9  lcd_send_nibble
 0     35   5    4    335  5.5  lcd_gotoxy
 0     36   5    1    272  4.1  lcd_putc
-0     10   1    0     20  1.3  ngatSSP
-0    112  16    0    204  3.8  showNumb
+0     29   4    1    111  4.2  ngatSSP
+0    112  15    0    204  3.8  showNumb
 0     21   3    3    165  3.7  @DIV88
  Inline         6    147  2.1  @PRINTF_D_784
-0     60   8    0    163  2.1  MAIN
-0      4   1    0             @const810
+0     76  10    0    163  2.1  MAIN
+0      4   1    0    163  2.1  @const811
 0     88  12    4    163  2.1  @PSTRINGC7_784
  Inline         0     20  1.3  @cinit1
 
 Program metrics:
-    Functions               14
-    Statements              365
+    Functions               15
+    Statements              368
     Comments                528
-    Volume (V)              6010
-    Difficulty (D)          43.6
-    Effort to implement (E) 262040
-    Time to implement (T)   4 hours, 3 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   13
-    Maintainability (MI)    82
+    Volume (V)              6571
+    Difficulty (D)          48.5
+    Effort to implement (E) 318706
+    Time to implement (T)   4 hours, 55 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   14
+    Maintainability (MI)    99
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-00050    77  0  
-00051-007FF   625  1342  
+00051-007FF   660  1307  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

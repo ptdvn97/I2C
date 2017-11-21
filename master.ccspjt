@@ -15,8 +15,8 @@ Type=4
 [Opened Files]
 1=slave.c
 2=master.c
-3=
-4=..\..\Downloads\Compressed\I2C - MCU MCU\I2C - MCU MCU\Code_Slaver2\Slaver2.c
+3=..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+4=
 5=
 [master.c]
 Type=4
